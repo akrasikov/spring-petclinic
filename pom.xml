@@ -372,20 +372,21 @@
 					<artifactId>findbugs-maven-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-			</plugins>
-			<plugin>
+
+				<plugin>
 					<groupId>org.liquibase</groupId>
 					<artifactId>liquibase-maven-plugin</artifactId>
 					<version>3.0.5</version>
 					<configuration>
 						<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 						<changeLogFile>src/main/resources/liquibase-petclinic.xml</changeLogFile>
-						<propertyFile>data-access.properties</propertyFile>
+						<propertyFile>src/main/resources/spring/data-access.properties</propertyFile>
 					</configuration>
 					<goals>
 						<goal>update</goal>
 					</goals>
 				</plugin>
+			</plugins>
 		</pluginManagement>
 		<plugins>
 				<plugin>
