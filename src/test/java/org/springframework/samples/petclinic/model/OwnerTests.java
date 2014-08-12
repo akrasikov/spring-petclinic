@@ -41,4 +41,9 @@ public class OwnerTests {
         assertEquals(fido, owner.getPet("fido"));
     }
 
+    @Test
+    public void testFails() {
+        assertNull("String");
+    }
+
 }
